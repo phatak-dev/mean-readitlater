@@ -22,8 +22,8 @@ router.get('/', function(req, res) {
 
 router.get('/urls',function(req,res) {
   var query = Urls.find({})	
-  query.toArray(function(err,questions) {
-    res.json(questions);
+  query.toArray(function(err,records) {
+    res.json(records);
   }) 
 });
 
