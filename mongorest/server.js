@@ -31,6 +31,21 @@ router.get('/urls',function(req,res) {
   }) 
 });
 
+//unread added
+router.get('/unread',function(req,res) {
+  var query = Urls.find({read:false});	
+  query.toArray(function(err,questions) {
+    res.json(questions);
+  }) 
+});
+
+router.get('/unread',function(req,res) {
+  var query = Urls.find({read:false});	
+  query.toArray(function(err,questions) {
+    res.json(questions);
+  }) 
+});
+
 router.post('/addurl/:url',function(req,res) {  
   var url = req.params.url;
   var jsonObject = {'url':url,'read':false};
