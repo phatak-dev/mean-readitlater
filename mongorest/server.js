@@ -2,8 +2,12 @@ var express    = require('express');
 var app        = express(); 
 var bodyParser = require('body-parser');
 var cors = require('cors');
+var ObjectID = require('mongodb').ObjectID
 
 app.use(cors());
+
+// to support JSON-encoded bodies
+app.use( bodyParser.json() );       
 
 var db,Urls;
 
@@ -29,8 +33,21 @@ router.get('/urls',function(req,res) {
 
 router.post('/addurl/:url',function(req,res) {  
   var url = req.params.url;
-  Urls.insert({'url':url},function(err,records){
+  var jsonObject = {'url':url,'read':false};
+  Urls.insert(jsonObject,function(err,records){
   	if(!err)res.json({ message: 'successfully added' });	
+  });
+});
+
+//update api 
+router.post('/update',function(req,res){
+  var json = req.body;
+  var id = json._id;
+  json._id = ObjectID(id);    
+  Urls.update({_id:ObjectID(id)},json, 
+  	 function(err,records){
+  	if(!err)console.log({ message: 'successfully updated' })
+    else console.log(err);	
   });
 });
 

@@ -7,8 +7,9 @@
 </head>
 <body ng-controller="UrlListCtrl">
  <ul>
-  <li ng-repeat="url in urls">
-   <a href="{{url}}" target="_blank">{{url}}</span>      
+  <li ng-repeat="urlJson in urlArrayJson">
+   <a href="{{urlJson.url}}" target="_blank">{{urlJson.url}}</a>
+   <button type="button" ng-click="update(urlJson);">Mark as Read</button>
    </li>
   </ul> 
  </body>
