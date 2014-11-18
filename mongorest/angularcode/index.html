@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html ng-app="readitlaterapp">
+<head>
+	<title>Show list of urls</title>
+	<script type="text/javascript" src="js/angular.min.js"></script>	
+	<script type="text/javascript" src="js/controllers.js"></script>
+</head>
+<body ng-controller="UrlListCtrl">
+ <ul>
+  <li ng-repeat="url in urls">
+   <a href="{{url}}" target="_blank">{{url}}</span>      
+   </li>
+  </ul> 
+ </body>
+ </html>

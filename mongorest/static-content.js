@@ -2,7 +2,7 @@ var express    = require('express');
 var bodyParser = require('body-parser');
 var app = express()
 
-app.use(express.static(__dirname + '/frontend'));
+app.use(express.static(__dirname + '/angularcode'));
 
 var port = process.env.PORT || 8081;
 app.listen(port)
