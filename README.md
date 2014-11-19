@@ -5,5 +5,5 @@ This repository contains the sample code to build MEAN based REST api. The code 
  * Master branch : contains initial server and chrome plugin
  * v0.2 : contains Angular code for rendering urls
  * v0.3 : read option is added
- * V0.4 : UI updated and showing read urls
+ * V0.4 : UI updated and showing only uread urls
 
