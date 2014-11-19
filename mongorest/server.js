@@ -4,10 +4,11 @@ var bodyParser = require('body-parser');
 
 var db,Urls;
 
-//make a request to access database and get urls table
+//make a request to access database
 var database = require('./database')
 database.start(function(){
    db = database.db;
+   //point to urls
    Urls = db.collection("urls");
 });
 
@@ -23,7 +24,8 @@ router.get('/', function(req, res) {
 
 //get all the urls stored in db
 router.get('/urls',function(req,res) {
-  var query = Urls.find({})	
+  var query = Urls.find({});	
+  //query only fires when you call toArray
   query.toArray(function(err,records) {
     res.json(records);
   }) 
