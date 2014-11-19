@@ -7,3 +7,6 @@ This repository contains the sample code to build MEAN based REST api. The code 
  * v0.3 : read option is added
  * V0.4 : UI updated and showing read urls
 
+## Setup
+
+Refer to this [gist](https://gist.github.com/phatak-dev/240dc329c75f8392d087) for setting up steps.
