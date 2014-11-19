@@ -51,9 +51,13 @@ router.post('/addurl/:url',function(req,res) {
 
 //update api 
 router.post('/update',function(req,res){
+  //we are using body-parser to get the json 
   var json = req.body;
   var id = json._id;
-  json._id = ObjectID(id);    
+  //modifying the id to match the mango db id
+  json._id = ObjectID(id);   
+  //first parameter is the document to be updated, 
+  //next param is updated record 
   Urls.update({_id:ObjectID(id)},json, 
   	 function(err,records){
   	if(!err)console.log({ message: 'successfully updated' })
