@@ -2,7 +2,7 @@
   "manifest_version": 2,
 
   "name": "Read it later",
-  "description": "This will save to the all",
+  "description": "Chrome plugin for adding urls",
   "version": "1.0",
 
   "permissions": [
