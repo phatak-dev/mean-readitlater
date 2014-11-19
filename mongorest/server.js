@@ -3,6 +3,7 @@ var app        = express();
 var bodyParser = require('body-parser');
 var cors = require('cors');
 
+//add cors to do the cross site requests
 app.use(cors());
 
 var db,Urls;
