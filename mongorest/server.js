@@ -2,7 +2,7 @@ var express    = require('express');
 var app        = express(); 
 var bodyParser = require('body-parser');
 var cors = require('cors');
-var ObjectID = require('mongodb').ObjectID
+var ObjectID = require('mongodb').ObjectID;
 
 //add cors to do the cross site requests
 app.use(cors());
@@ -13,7 +13,7 @@ app.use( bodyParser.json() );
 var db,Urls;
 
 //make a request to access database
-var database = require('./database')
+var database = require('./database');
 database.start(function(){
    db = database.db;
    //point to urls

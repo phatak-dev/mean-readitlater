@@ -1,7 +1,7 @@
 var rilApp = angular.module('readitlaterapp', []);
-rilApp.controller('UrlListCtrl', function ($scope,$http) {
-	var getUrl = 'http://localhost:8080/api/unread'
-	var updateUrl = 'http://localhost:8080/api/update'
+rilApp.controller('UrlListCtrl',['$scope', '$http', function ($scope, $http) {
+	var getUrl = 'http://localhost:8080/api/unread';
+	var updateUrl = 'http://localhost:8080/api/update';
 
 	$http.get(getUrl).then(function(r){    	          
 		$scope.urlArrayJson = r.data;
@@ -17,6 +17,6 @@ rilApp.controller('UrlListCtrl', function ($scope,$http) {
 	  $scope.urlArrayJson.splice($scope.urlArrayJson.
 	  	indexOf(urlJson),1);
 	};
-});
+}]);
 
 
