@@ -2,7 +2,7 @@
 var MongoClient = require('mongodb').MongoClient;
 module.exports = {
  start : startFn 
-}
+};
 
 /**
   Connects to the db and calls the callback if it's successfully connected
