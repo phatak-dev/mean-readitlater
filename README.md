@@ -10,3 +10,7 @@ This repository contains the sample code to build MEAN based REST api. The code 
 ## Setup
 
 Refer to this [gist](https://gist.github.com/phatak-dev/240dc329c75f8392d087) for setting up steps.
+
+# Slides
+
+You can find slides [here](http://www.slideshare.net/madhukaraphatak/mean-41838061)
