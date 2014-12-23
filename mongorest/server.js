@@ -1,6 +1,10 @@
 var express    = require('express'); 
 var app        = express(); 
 var bodyParser = require('body-parser');
+var cors = require('cors');
+
+//add cors to do the cross site requests
+app.use(cors());
 
 var db,Urls;
 
@@ -46,3 +50,7 @@ app.use('/api', router);
 
 app.listen(port);
 console.log('Magic happens on port ' + port);
+
+//another route for static file
+require('./static-content.js');
+
